@@ -1,3 +1,4 @@
+/*Importa a font Roboto, do Google Fonts via @import:*/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 * {
   margin: 0;
@@ -14,6 +15,7 @@ body {
   min-height: 100vh;
   color: white;
 }
+
 /*Bolinha background 1:*/
 section::after {
   content: "";
@@ -38,6 +40,7 @@ section::before {
   clip-path: circle(30% at right 70%);
 }
 
+/*Container que abriga os cards:*/
 .container {
   position: relative;
   z-index: 1;
@@ -45,11 +48,14 @@ section::before {
   justify-content: center;
   align-items: center;
   text-align: center;
+  /*Faz com que os cards não fiquem
+  só numa linha se a tela for menor:*/
   flex-wrap: wrap;
   margin: 40px 0;
 }
 
-.container .card {
+/*Estilos dos cards, dentro do container:*/
+.card {
   position: relative;
   width: 300px;
   height: 400px;
@@ -60,10 +66,12 @@ section::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(10px);
+  /*Embaça o fundo:*/
+  backdrop-filter: blur(5px);
 }
 
-.container .card .content {
+/*Estilo do conteúdo dentro dos cards:*/
+.content {
   position: relative;
   display: flex;
   justify-content: center;
@@ -73,12 +81,15 @@ section::before {
   transition: 0.5s;
 }
 
+/*Comportamento do conteúdo dos cards ao
+passar o mouse em cima:*/
 .container .card:hover .content {
   opacity: 1;
   transform: translateY(-20px);
 }
 
-.container .card .content .imgBx {
+/*Imagem do avatar, com borda externa sutil:*/
+.container .card .content .avatarImg {
   position: relative;
   width: 150px;
   height: 150px;
@@ -87,7 +98,8 @@ section::before {
   border: 10px solid rgba(0, 0, 0, 0.25);
 }
 
-.container .card .content .imgBx img {
+/*Posicionamento da imagem do avatar dentro da borda:*/
+.container .card .content .avatarImg img {
   position: absolute;
   top: 0;
   left: 0;
@@ -96,7 +108,8 @@ section::before {
   object-fit: cover;
 }
 
-.container .card .content .contentBx h3 {
+/*Estilo do nome/título do avatar:*/
+.container .card .content .avatarTxt h3 {
   color: white;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -107,36 +120,48 @@ section::before {
   line-height: 1.1em;
 }
 
-.container .card .content .contentBx h3 span {
+/*Estilo do cargo/subtítulo do avatar:*/
+.container .card .content .avatarTxt h3 span {
   font-size: 12px;
   font-weight: 300;
   text-transform: initial;
 }
 
-.container .card .sci {
+/*Posição dos ícones de rede social do avatar:*/
+.container .card .socialIcons {
   position: absolute;
   bottom: 50px;
   display: flex;
 }
 
-.container .card .sci li {
+/*Estilo da lista de rede social:*/
+.container .card .socialIcons li {
   /*Tira as bolinhas de lista:*/
   list-style: none;
   /*Dá espaçamento pros ícones*/
   margin: 0 10px;
   /*Deixa escondido embaixo do card:*/
   transform: translateY(40px);
+  /*Deixa a transição suave:*/
   transition: 0.5s;
   opacity: 0;
+  /*Faz a transição acontecer em cascata,
+  a partir dos valores da variável "--i"
+  definida lá no HTML:*/
   transition-delay: calc(0.1s * var(--i));
 }
 
-.container .card:hover .sci li {
+/*Comportamento dos ícones rede social ao 
+passar o mouse em cima:*/
+.container .card:hover .socialIcons li {
+  /*Faz os ícones subirem pra uma posição
+  visível, já que antes estavam escondidos:*/
   transform: translateY(0px);
   opacity: 1;
 }
 
-.container .card .sci li a {
+/*Estilo ícones de rede social, dentro da tag "a":*/
+.container .card .socialIcons li a {
   color: white;
   font-size: 24px;
 }
