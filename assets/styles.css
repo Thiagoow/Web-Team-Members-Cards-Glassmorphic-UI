@@ -120,8 +120,11 @@ section::before {
 }
 
 .container .card .sci li {
+  /*Tira as bolinhas de lista:*/
   list-style: none;
+  /*Dá espaçamento pros ícones*/
   margin: 0 10px;
+  /*Deixa escondido embaixo do card:*/
   transform: translateY(40px);
   transition: 0.5s;
   opacity: 0;
