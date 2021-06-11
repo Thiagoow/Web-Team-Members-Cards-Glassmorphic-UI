@@ -14,8 +14,19 @@ body {
   min-height: 100vh;
   color: white;
 }
-
 /*Bolinha background 1:*/
+section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#2196f3, #e91e63);
+  clip-path: circle(30% at left 10%);
+}
+
+/*Bolinha background 2:*/
 section::before {
   content: "";
   position: absolute;
@@ -25,18 +36,6 @@ section::before {
   height: 100%;
   background: linear-gradient(#f00, #f0f);
   clip-path: circle(30% at right 70%);
-}
-
-/*Bolinha background 2:*/
-section::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#2196f3, #e91e63);
-  clip-path: circle(20% at 10% 10%);
 }
 
 .container {
