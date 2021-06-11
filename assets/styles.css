@@ -85,6 +85,8 @@ section::before {
 passar o mouse em cima:*/
 .container .card:hover .content {
   opacity: 1;
+  /*Sobe um pouco o conteúdo do card
+  pra caber os ícones de rede social:*/
   transform: translateY(-20px);
 }
 
