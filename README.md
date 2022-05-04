@@ -9,4 +9,4 @@
 tendo como base o <a href="https://www.youtube.com/watch?v=Q22Tli-D4mw">tutorial,</a> do canal do Youtube: 
 <a href=https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog>Online Tutorials</a>
 
-## Demo: https://team-members-card.netlify.app/
+## Demo: https://team-members-cards.vercel.app
